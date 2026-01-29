@@ -581,8 +581,10 @@ ul, ol {
 
 .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .screenshot-grid img {
@@ -599,15 +601,9 @@ ul, ol {
 
 @media (max-width: 768px) {
   .screenshot-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .screenshot-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 16px;
+    max-width: 400px;
   }
 }
 
