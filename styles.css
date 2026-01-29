@@ -832,14 +832,24 @@ ul, ol {
   to { transform: rotate(360deg); }
 }
 
-.schedule-notice {
+.schedule-closed {
+  grid-column: 1 / -1;
   text-align: center;
-  color: var(--text-muted);
-  font-size: 0.875rem;
+  padding: 60px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
 }
 
-.schedule-notice p {
-  margin-bottom: 4px;
+.schedule-closed p {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.schedule-closed p:first-child {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 /* ===== Section 7: Price ===== */

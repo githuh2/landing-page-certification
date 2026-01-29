@@ -86,31 +86,15 @@
   }
 
   function renderSampleSchedule() {
-    // Sample data for demonstration
-    const sampleSchedules = [
-      {
-        id: 'COURSE-001',
-        name: '실전 기업인증 마스터 과정 35기',
-        date: '2026년 2월 14일 ~ 16일',
-        time: '10:00 ~ 18:00',
-        capacity: 20,
-        enrolled: 17,
-        status: '모집중'
-      },
-      {
-        id: 'COURSE-002',
-        name: '실전 기업인증 마스터 과정 36기',
-        date: '2026년 3월 7일 ~ 9일',
-        time: '10:00 ~ 18:00',
-        capacity: 20,
-        enrolled: 8,
-        status: '모집중'
-      }
-    ];
+    // Fallback: show all courses closed
+    const container = document.getElementById('schedule-container');
+    container.innerHTML = '<div class="schedule-closed"><p>현재 모집 중인 강의가 없습니다.</p><p>상담 신청을 통해 다음 기수 일정을 문의해 주세요.</p></div>';
 
-    renderSchedule(sampleSchedules);
-    populateCourseSelect(sampleSchedules);
-    updateUrgencyNotice(sampleSchedules);
+    // Populate course select with general inquiry only
+    const select = document.getElementById('course');
+    if (select) {
+      select.innerHTML = '<option value="">강의를 선택해주세요</option><option value="GENERAL">다음 기수 문의</option>';
+    }
   }
 
   function populateCourseSelect(schedules) {
