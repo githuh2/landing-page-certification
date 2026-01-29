@@ -815,7 +815,21 @@ ul, ol {
 .schedule-loading {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 80px;
+  padding: 60px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+}
+
+.schedule-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
 }
 
 .spinner {

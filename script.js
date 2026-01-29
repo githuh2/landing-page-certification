@@ -26,14 +26,20 @@
   async function fetchSchedule() {
     const container = document.getElementById('schedule-container');
 
-    // If no script URL configured, show sample data
+    // If no script URL configured, show fallback
     if (!SCRIPT_URL || SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
       renderSampleSchedule();
       return;
     }
 
     try {
-      const response = await fetch(SCRIPT_URL);
+      // Add timeout for faster fallback (5 seconds)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+      const response = await fetch(SCRIPT_URL, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
       if (!response.ok) throw new Error('Failed to fetch schedule');
 
       const data = await response.json();
