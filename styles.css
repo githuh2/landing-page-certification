@@ -581,10 +581,14 @@ ul, ol {
 
 .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 800px;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 100%;
   margin: 0 auto;
+}
+
+.screenshot-grid picture {
+  display: block;
 }
 
 .screenshot-grid img {
@@ -595,16 +599,8 @@ ul, ol {
 }
 
 .screenshot-grid img:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
   box-shadow: 0 0 30px rgba(112, 0, 255, 0.3);
-}
-
-@media (max-width: 768px) {
-  .screenshot-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    max-width: 400px;
-  }
 }
 
 /* ===== Section 5: Instructor ===== */
