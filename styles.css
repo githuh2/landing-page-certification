@@ -566,6 +566,51 @@ ul, ol {
   margin-top: 8px;
 }
 
+/* Review Screenshots */
+.review-screenshots {
+  margin-top: 60px;
+}
+
+.review-screenshots h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text-primary);
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(112, 0, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
 /* ===== Section 5: Instructor ===== */
 .instructor {
   padding: var(--section-padding);
