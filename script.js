@@ -66,12 +66,11 @@
           </div>
           <div class="schedule-body">
             <div class="schedule-date">
-              <span>📅</span>
               <span>${schedule.date}</span>
               ${isUrgent ? '<span class="schedule-badge">마감 임박</span>' : ''}
               ${isSoldOut ? '<span class="schedule-badge">마감</span>' : ''}
             </div>
-            <div class="schedule-time">⏰ ${schedule.time}</div>
+            <div class="schedule-time">${schedule.time}</div>
             <div class="schedule-seats">
               <span class="seats-label">잔여석</span>
               <span class="seats-count ${isUrgent ? 'urgent' : ''}">
