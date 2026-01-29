@@ -8,7 +8,7 @@ const CONFIG = {
 
   // Google Apps Script Web App URL
   // Deploy Apps Script and paste the URL here
-  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyY__doSOfoV776Ok35HV1rU3dDVDWx2VsIAQpWtUzZWoHhpZbpViWiDIUpoxN29AN4/exec',
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbwfz3Gr3EduUd7JYlr-ZKEBwF-bAxfd_p9BLdpMmc7FJC-0HJHGLEvOsiqTl9AQFRVf/exec',
 
   // Company Information
   COMPANY: {
