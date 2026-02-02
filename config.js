@@ -4,7 +4,7 @@
 const CONFIG = {
   // Meta (Facebook) Pixel ID
   // Get from: https://business.facebook.com/events_manager
-  PIXEL_ID: 'YOUR_PIXEL_ID_HERE',
+  PIXEL_ID: '1686671692702665',
 
   // Google Apps Script Web App URL
   // Deploy Apps Script and paste the URL here
